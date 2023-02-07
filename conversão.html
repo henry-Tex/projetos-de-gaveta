@@ -1,0 +1,32 @@
+<!DOCCTYPE html>
+<html>
+<head>
+        <title>CONVERSOR</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+                var captar = "";
+                function substituir () {
+                captar = document.getElementById('valor').value;
+                let numero = captar.split('');
+                let result = null;
+                for (let index = 0; index < numero.length; index++) {
+                    if (numero[index]===',') numero[index]='.';
+                    else if (numero[index]==='.') numero[index]=',';
+                }
+                result = numero.join('');
+                console.log(result);
+                document.getElementById('digito').innerHTML=result;
+                }
+        </script>
+</head>
+<body>
+    <h1>Conversor</h1><h4>versão 1.0 betateste</h4>
+    <input type="text" name="valor" id="valor">
+    <input type="submit" name="" onclick="substituir()">
+    
+    <h4 id="digito">
+    
+    </h4>>
+
+</body>
+</html>
